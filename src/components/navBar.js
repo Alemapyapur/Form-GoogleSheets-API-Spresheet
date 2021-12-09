@@ -1,39 +1,29 @@
 import React, { Component } from 'react'
-import { Divider, Tab } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 
-const color = [ 'teal' ]
+export default class MenuExampleInverted extends Component {
+  state = { activeItem: 'home' }
 
-const panel = [
-  {
-    menuItem: 'Tab 1',
-    render: () => <Tab.Pane attached={false}>Tab 1 Content</Tab.Pane>,
-  },
-  {
-    menuItem: 'Tab 2',
-    render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane>,
-  },
-  {
-    menuItem: 'Tab 3',
-    render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
-  },
-]
-
-class NavBar extends Component {
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
+    const { activeItem } = this.state
 
     return (
       <div>
-
-        <Divider hidden />
-
-        <Tab
-          menu={{ color, inverted: true, attached: false, tabular: false }}
-          panel={panel}
-        />
+        <Menu pointing secondary>
+          <Menu.Item
+            name='home'
+            active={activeItem === 'home'}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name='tabla'
+            active={activeItem === 'tabla'}
+            onClick={this.handleItemClick}
+          />
+        </Menu>
       </div>
     )
   }
 }
-
-export default NavBar;
