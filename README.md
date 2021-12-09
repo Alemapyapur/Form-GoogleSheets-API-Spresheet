@@ -1,10 +1,6 @@
 ## FORM GOOGLE SHEET
 
 ## Índice
-
-- [FORM GOOGLE SHEET](#form-google-sheet)
-- [Índice](#índice)
-- [- 📌 Peticiones mediante Sheet.best](#---peticiones-mediante-sheetbest)
 - [1. Resumen del proyecto](#1-resumen-del-proyecto)
 - [2. Guia de uso](#2-guia-de-uso)
   - [📌 Herramientas usadas:](#-herramientas-usadas)
@@ -29,7 +25,7 @@ Se podra visualizar tanto en la tabla como en el google sheet a tiempo real la d
 📎Axios
 📎Sheet.best
 
-### 📌 Pagina principal:
+### 📌 Página principal:
 
 ![](src/assets/page1.png)
 
